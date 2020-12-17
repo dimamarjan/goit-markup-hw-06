@@ -13,6 +13,10 @@
   --animation-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 body {
   background-color: #ffffff;
   color: var(--primary-text-color);
@@ -287,6 +291,7 @@ body {
   text-align: center;
 }
 
+/* hero modal window */
 .backdrop {
   position: fixed;
   top: 0;
@@ -340,11 +345,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  fill: #000000;
+  fill: currentColor;
   width: 28px;
   height: 28px;
   padding: 0;
   margin: 0;
+}
+
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
+  color: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -358,6 +368,101 @@ body {
   transform: translate(-50%, -50%) translateY(100%) scale(0);
 
   transition: transform var(--animation-timing);
+}
+
+.modal .modal-content {
+  padding: 40px;
+}
+
+.modal .modal-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal .form-section,
+.modal .form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields .form-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding-left: 42px;
+}
+
+.form-fields .form-label {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--secondary-text-color);
+  letter-spacing: 0.01em;
+
+  margin-bottom: 4px;
+}
+
+.form-fields .text-field {
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--navigation-text-color);
+}
+
+.form-fields .form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.text-field:hover .form-icon,
+.text-field:focus-within .form-icon {
+  color: var(--accent-color);
+}
+
+.text-field:hover .form-input,
+.text-field:focus-within .form-input,
+.comment-section:hover .form-comment,
+.comment-section:focus-within .form-comment {
+  border-color: var(--accent-color);
+}
+
+.form-fields .form-comment {
+  /* border-color: var(--accent-color); */
+  display: block;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  padding: 12px;
+}
+
+.form-fields .form-comment::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 /* skills company section */
