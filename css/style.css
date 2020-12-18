@@ -11,7 +11,7 @@
   --main-font-family: Roboto, sans-serif;
   --main-logo-font: Raleway, sans-serif;
   --animation-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --letter-pacing-main: 0.03em;
+  --letter-spacing-main: 0.03em;
 }
 
 :focus {
@@ -46,7 +46,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
 
   margin-right: 93px;
 }
@@ -172,7 +172,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
@@ -199,6 +199,10 @@ body {
 
 .address-links .link.contact {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.networks-links {
+  margin-right: 93px;
 }
 
 .networks-links .networks-title {
@@ -232,6 +236,39 @@ body {
 .networks-links .address-social:focus {
   background-color: var(--accent-color);
   color: var(--accent-color-text);
+}
+
+.submit-section .submit-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 12px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--letter-spacing-main);
+  text-transform: uppercase;
+  color: var(--accent-color-text);
+}
+
+.submit-section .submit-field {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+  background-color: var(--address-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.submit-section .submit-field::placeholder {
+  text-align: start;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--letter-spacing-main);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* --------------- Header and Footer end --------------- */
@@ -382,7 +419,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
 }
 
 .modal .form-section,
@@ -512,14 +549,14 @@ body {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
 }
 
 .policy .policy-link {
   color: var(--accent-color);
 }
 
-.modal .submit-button {
+.submit-button {
   display: inline-block;
   width: 200px;
   height: 50px;
@@ -623,7 +660,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
   text-transform: uppercase;
   color: var(--accent-color-text);
 
@@ -742,7 +779,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  letter-spacing: var(--letter-pacing-main);
+  letter-spacing: var(--letter-spacing-main);
   color: var(--navigation-text-color);
   margin-bottom: 50px;
 }

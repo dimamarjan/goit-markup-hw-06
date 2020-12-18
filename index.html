@@ -553,6 +553,19 @@
               </li>
             </ul>
           </div>
+          <form action="#" class="submit-section">
+            <p class="submit-title">Подпишитесь на рассылку</p>
+            <div class="submit-container">
+              <input
+                class="submit-field"
+                type="email"
+                name="mail-submit"
+                id="mail-submit"
+                placeholder="E-mail"
+              />
+              <button class="submit-button" type="submit">Подписаться</button>
+            </div>
+          </form>
         </div>
       </address>
     </footer>
@@ -566,7 +579,7 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="modal-content">
+        <form action="#" class="modal-content">
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
           <div class="form-fields">
             <label class="form-label" for="name">Имя</label>
@@ -619,6 +632,7 @@
                   class="policy-checkbox visually-hidden"
                   type="checkbox"
                   name="policy"
+                  value="policy-accept"
                   id="policy-label"
                 />
                 <span class="checkbox-icon"></span>
@@ -630,7 +644,7 @@
             </div>
             <button class="submit-button" type="submit">Отправить</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
