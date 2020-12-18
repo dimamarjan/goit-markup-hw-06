@@ -11,6 +11,7 @@
   --main-font-family: Roboto, sans-serif;
   --main-logo-font: Raleway, sans-serif;
   --animation-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --letter-pacing-main: 0.03em;
 }
 
 :focus {
@@ -20,7 +21,6 @@
 body {
   background-color: #ffffff;
   color: var(--primary-text-color);
-  letter-spacing: 0.03em;
   font-family: var(--main-font-family);
 }
 
@@ -46,7 +46,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-pacing-main);
 
   margin-right: 93px;
 }
@@ -172,7 +172,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-pacing-main);
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
@@ -382,7 +382,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-pacing-main);
 }
 
 .modal .form-section,
@@ -398,6 +398,8 @@ body {
   border-radius: 4px;
 
   padding-left: 42px;
+
+  transition: border-color var(--animation-timing);
 }
 
 .form-fields .form-label {
@@ -425,6 +427,8 @@ body {
   width: 18px;
   height: 18px;
   fill: currentColor;
+
+  transition: color var(--animation-timing);
 }
 
 .text-field:hover .form-icon,
@@ -439,20 +443,25 @@ body {
   border-color: var(--accent-color);
 }
 
+.form-fields .comment-section {
+  margin-bottom: 20px;
+}
+
 .form-fields .form-comment {
-  /* border-color: var(--accent-color); */
   display: block;
   width: 448px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  padding: 12px;
 
   font-weight: normal;
   font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-  padding: 12px;
+
+  transition: border-color var(--animation-timing);
 }
 
 .form-fields .form-comment::placeholder {
@@ -463,6 +472,77 @@ body {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.policy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.policy .checkbox-icon::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--navigation-text-color);
+  border-radius: 2px;
+  margin-left: 13px;
+  margin-right: 7px;
+
+  transition: background-color var(--animation-timing),
+    background-image var(--animation-timing),
+    background-size var(--animation-timing), border var(--animation-timing);
+}
+
+.policy-checkbox:checked + .checkbox-icon::before {
+  background-color: var(--accent-color);
+  background-image: url("/images/checked.svg");
+  background-size: contain;
+  border: transparent;
+
+  transition: background-color var(--animation-timing),
+    background-image var(--animation-timing),
+    background-size var(--animation-timing), border var(--animation-timing);
+}
+
+.policy .policy-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+  letter-spacing: var(--letter-pacing-main);
+}
+
+.policy .policy-link {
+  color: var(--accent-color);
+}
+
+.modal .submit-button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2196f3;
+  color: var(--accent-color-text);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+
+  letter-spacing: 0.06em;
+
+  transition: background-color var(--animation-timing);
+}
+
+.modal .submit-button:hover,
+.modal .submit-button:focus {
+  background-color: #188ce8;
 }
 
 /* skills company section */
@@ -543,7 +623,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-pacing-main);
   text-transform: uppercase;
   color: var(--accent-color-text);
 
@@ -662,7 +742,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-pacing-main);
   color: var(--navigation-text-color);
   margin-bottom: 50px;
 }
