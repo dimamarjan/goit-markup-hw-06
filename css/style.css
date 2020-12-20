@@ -162,6 +162,7 @@ body {
 }
 
 .address .section {
+  background-color: var(--address-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -246,6 +247,10 @@ body {
   color: var(--accent-color-text);
 }
 
+.submit-section .submit-container {
+  display: flex;
+}
+
 .submit-section .submit-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -268,6 +273,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .submit-section .submit-field::placeholder {
@@ -277,6 +284,30 @@ body {
   line-height: 1.25;
   letter-spacing: var(--letter-spacing-main);
   color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-section .submit-button {
+  position: relative;
+  display: flex;
+  color: var(--accent-color-text);
+  padding-left: 29px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  margin: 0;
+  text-align: left;
+}
+
+.submit-button .sent-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+
+  top: 50%;
+  transform: translateY(-50%);
+  left: 148px;
+  fill: currentColor;
 }
 
 /* --------------- Header and Footer end --------------- */
@@ -544,7 +575,7 @@ body {
 
 .policy-checkbox:checked + .checkbox-icon::before {
   background-color: var(--accent-color);
-  background-image: url("./images/checked.svg");
+  background-image: url("../images/checked.svg");
   background-size: contain;
   border: transparent;
 
