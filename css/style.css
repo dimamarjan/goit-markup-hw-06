@@ -588,6 +588,10 @@ body {
     background-size var(--animation-timing), border var(--animation-timing);
 }
 
+.policy-checkbox:focus + .checkbox-icon::before {
+  outline: 2px solid #2195f33a;
+}
+
 .policy .policy-text {
   font-weight: 400;
   font-size: 14px;
